@@ -6,7 +6,7 @@ const authAPI = require("../middleware/authAPI");
 
 
 //API Rest Post, para inserir um registro user na BD
-router.post("/user", authAPI, (req, res) => {
+router.post("/user", (req, res) => {
     var name = req.body.name;
     var email = req.body.email;
     var password = req.body.password;
