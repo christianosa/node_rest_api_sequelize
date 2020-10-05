@@ -22,6 +22,6 @@ const User = connection.define('users',{
     }
 })
 
-
+//Essa linha, ao ser desabilitada, força o BD a criar a estrutura
 //User.sync({force:true});
 module.exports = User;
