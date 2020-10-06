@@ -1,6 +1,6 @@
 
 ## What is this?
-This example / project was created as an initiative to share something I learned about how to create REST API in NODE (backend).
+This example / project was created as an initiative to share something I learned about how to create REST API in Node.js (backend).
 
 ## Introduction 
 This project is an application / sample created to memorize topics from a great online course I attended. It was an interesting sample that I would like to share.
@@ -12,7 +12,7 @@ Many projects today need to deliver the REST API to integrate systems. I believe
 
 ## Technologies
 Project is created with:
-* Node versiom 12.18.3
+* Node.js versiom 12.18.3
 * express version 4.17.1
 * mysql2 version 2.2.5
 * sequelize version 6.3.5
