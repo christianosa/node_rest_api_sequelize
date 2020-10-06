@@ -7,13 +7,9 @@ This project is an application / sample created to memorize topics from a great 
 Many projects today need to deliver the REST API to integrate systems. I believe it is a good example to show how to do this.
 
 ## Table of contents
-* [General info](#general-info)
 * [Technologies](#technologies)
 * [Setup](#setup)
 
-## General info
-This project is simple Lorem ipsum dolor generator.
-	
 ## Technologies
 Project is created with:
 * Node versiom 12.18.3
