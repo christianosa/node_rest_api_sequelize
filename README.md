@@ -21,12 +21,11 @@ Project is created with:
 * jsonwebtoken version 8.5.1
 	
 ## Setup
-To run this project, install it locally using npm:
+To run this project, install it locally using npm: <br>
+$ npm install express --save <br>
+$ npm install sequelize --save <br>
+$ npm install mysql2 --save <br>
+$ npm install body-parser --save <br>
 
-$ npm install express --save
-$ npm install sequelize --save
-$ npm install mysql2 --save
-$ npm install body-parser --save
-
-After install, use this command to start your server (from project directory):
+After install, use this command to start your server (from project directory): <br>
 $ node index.js
