@@ -55,7 +55,7 @@ Antes de usar qualquer um dos terminais abaixo, você precisa estar autenticado.
 </pre>
 
 To Add a new user, you can use the follow endpoint:
-* POST / user (insert a new user in database, passing jason object - user). Expect returned, when everything was ok: status code 200. 
+* POST / user (insert a new user in database, passing jason object - user). expected return when all goes well: status code 200. 
 ```
 Ex. 
 {
