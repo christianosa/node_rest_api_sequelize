@@ -54,7 +54,7 @@ Antes de usar qualquer um dos terminais abaixo, você precisa estar autenticado.
     }); 
 </pre>
 
-To Add a new user, you can use the follow endpoint:
+At first time, you need to Add a new user. You can use the follow endpoint:
 * POST / user (insert a new user in database, passing jason object - user). expected return when all goes well: status code 200. 
 ```
 Ex. 
