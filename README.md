@@ -32,7 +32,7 @@ $ node index.js
 
 ## Endpoints
 
-Before use any of above endpoints you need to be autenticated. To do that, use the follow endpoint: <br>
+Antes de usar qualquer um dos terminais abaixo, você precisa estar autenticado. Para fazer isso, use o seguinte 'auth': <br>
 * POST /auth (you need to pass as param: user / password). This will return a Bearer Token. You need to inform this Token as a param to use the endpoints. Sample using axios:
 <pre>
     //var to setup the authentication process
