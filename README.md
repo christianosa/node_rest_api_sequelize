@@ -1,5 +1,3 @@
-# API Rest
-
 ## What is this?
 This example / project was created as an initiative to share something I learned about how to create REST API in Node.js (backend).
 
@@ -10,6 +8,7 @@ Many projects today need to deliver the REST API to integrate systems. I believe
 ## Table of contents
 * [Technologies](#technologies)
 * [Setup](#setup)
+* [Endpoints](#endpoint)
 
 ## Technologies
 Project is created with:
@@ -30,3 +29,32 @@ $ npm install body-parser --save <br>
 
 After install, use this command to start your server (from project directory): <br>
 $ node index.js
+
+## Endpoints
+
+Before use any of above endpoints you need to be autenticated. To do that, use the follow endpoint: <br>
+* POST /auth (you need to pass as param: user / password). This will return a Bearer Token. You need to inform this Token as a param to use the endpoints. Sample using axios:
+<pre>
+    //var to setup the authentication process
+    var authConfig = {
+        headers: {
+ 	     Authorization: "Bearer "
+        }
+    };
+    
+    //Get authorization token and set authConfig var.
+    var authConfig;
+    axios.post("http://localhost:3000/auth", {
+	email, password
+    }).then(res => {
+	var token = res.data.token;
+	authConfig.headers.Authorization = "Bearer " + token;
+    }).catch(err => {
+        console.log(err);
+    });	
+</pre>
+
+* GET /games (list all games. retorn a list of object game - json format). <pre> Ex: get("http://localhost:3000/games", authsConfig) </pre> 
+* POST / game:id (get a especific game identified by id. return object related to the indicated id - json format)
+* DELETE / game:id (delete especific game identified by id. return status code 200 - if everything went as expected)
+* PUT / game:id (update an especic game, identified by id. retorn status code 200 - if everything went as expected)
