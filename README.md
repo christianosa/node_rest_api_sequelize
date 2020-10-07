@@ -34,7 +34,7 @@ $ node index.js
 
 Before use any of above endpoints you need to be autenticated. To do that, use the follow endpoint: <br>
 * POST /auth (you need to pass as param: user / password). This will return a Bearer Token. You need to inform this Token as a param to use the endpoints. Sample using axios:
-`   //var to setup the authentication process
+~~~   //var to setup the authentication process
     var authConfig = {
         headers: {
  	     Authorization: "Bearer "
@@ -50,7 +50,7 @@ Before use any of above endpoints you need to be autenticated. To do that, use t
 	authConfig.headers.Authorization = "Bearer " + token;
     }).catch(err => {
         console.log(err);
-    }); `
+    }); ~~~
 
 * GET /games (list all games. retorn a list of object game - json format). <pre> Ex: GET("http://localhost:3000/games", authConfig) </pre> 
 * POST / game:id (get a especific game identified by id. return object related to the indicated id - json format). Ex: POST("http://localhost:3000/game:id", authConfig) </pre>
