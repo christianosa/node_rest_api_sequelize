@@ -53,6 +53,18 @@ Antes de usar qualquer um dos terminais abaixo, você precisa estar autenticado.
         console.log(err);
     }); 
 </pre>
+
+To Add a new user, you can use the follow endpoint:
+* POST / user (insert a new user in database, passing jason object - user). Expect returned, when everything was ok: status code 200. 
+```
+Ex. 
+{
+    "name":"John Doe",
+    "email":"john@gmail.com",
+    "password":"p@ssword"
+}
+```
+
 * GET /games (list all games. retorn a list of object game - json format). <pre> Ex: GET("http://localhost:3000/games", authConfig) </pre> 
 * POST / game:id (get a especific game identified by id. return object related to the indicated id - json format). <pre> Ex: POST("http://localhost:3000/game:id", authConfig) </pre>
 * DELETE / game:id (delete especific game identified by id. return status code 200 - if everything went as expected). <pre> Ex: DELETE("http://localhost:3000/game/:id", authConfig) </pre>
