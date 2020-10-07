@@ -54,6 +54,6 @@ Before use any of above endpoints you need to be autenticated. To do that, use t
     }); 
 </pre>
 * GET /games (list all games. retorn a list of object game - json format). <pre> Ex: GET("http://localhost:3000/games", authConfig) </pre> 
-* POST / game:id (get a especific game identified by id. return object related to the indicated id - json format). Ex: POST("http://localhost:3000/game:id", authConfig) </pre>
-* DELETE / game:id (delete especific game identified by id. return status code 200 - if everything went as expected). Ex: DELETE("http://localhost:3000/game/:id", authConfig) </pre>
-* PUT / game:id (update an especic game, identified by id. retorn status code 200 - if everything went as expected). Ex: PUT("http://localhost:3000/game/:id", game, authConfig) </pre>
+* POST / game:id (get a especific game identified by id. return object related to the indicated id - json format). <pre> Ex: POST("http://localhost:3000/game:id", authConfig) </pre>
+* DELETE / game:id (delete especific game identified by id. return status code 200 - if everything went as expected). <pre> Ex: DELETE("http://localhost:3000/game/:id", authConfig) </pre>
+* PUT / game:id (update an especic game, identified by id. retorn status code 200 - if everything went as expected). <pre> Ex: PUT("http://localhost:3000/game/:id", game, authConfig) </pre>
