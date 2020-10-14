@@ -7,11 +7,7 @@ const cors = require("cors");
 const gamesController = require("./games/GamesController");
 const usersController = require("./users/UsersController");
 
-function auth(req, res, next) {
-    const authToken = req.headers['authorization'];
-    console.log(authToken);
-    next();
-}
+
 
 
 //Instancia da biblioteca Express

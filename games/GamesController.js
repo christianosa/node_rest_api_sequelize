@@ -40,9 +40,34 @@ router.get("/game/:id", authAPI, (req, res) => {
     //Busca no BD do Game através da Pk ID
     Game.findByPk(id).then(game => {
         if(game != undefined){
+
+
+            var HATEOAS = [
+                {
+                    href: "http://localhost:3000/game/"+id,
+                    method: "GET",
+                    rel: "get_game"
+                }, 
+                {
+                    href: "http://localhost:3000/game/"+id,
+                    method: "DELETE",
+                    rel: "delete_game"
+                }, 
+                {
+                    href: "http://localhost:3000/game/"+id,
+                    method: "PUT",
+                    rel: "edit_game"
+                },                 
+                {
+                    href: "http://localhost:3000/games",
+                    method: "POST",
+                    rel: "get_all_games"
+                }
+            ]
+
             //Retorno código de sucesso, junto com o Game
             res.statusCode = 200;
-            res.json(game);
+            res.json({game, _links: HATEOAS});
         }else{
             //Retorno Game não encontrado.
             res.sendStatus(404);
@@ -139,9 +164,10 @@ router.put("/game/:id", authAPI, (req, res) => {
 
 //API Rest para listar os games cadastrados
 router.get("/games", authAPI, (req, res) => {
+
     res.statusCode = 200;
     Game.findAll().then(games => {
-         res.json({user: req.loggedUser, games});
+         res.json(games);
         
     });
 }) ;
